@@ -1,2 +1,2 @@
 # Hangeman
-Python CLI Hangeman game
+Python CLI Hangman game
