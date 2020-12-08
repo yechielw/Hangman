@@ -127,12 +127,15 @@ def main():
         #1 print the welcome message
         START_PAGE(MAX_TRIES)
 
-        secret_word = choose_word(input(r"Please enter a valid path to the TXT file: "), int(input("Please enter a valid index number")))
+        #secret_word = choose_word(input(r"Please enter a valid path to the TXT file: "), int(input("Please enter a valid index number")))
+        secret_word = input("Pleas choose a word:")
+        for i in range(30):
+            print(" ")
         # a list variable to contane the guessed letters
         old_letters_guessed = []
         
         # a int variable that counts the number of failures
-        num_of_tries = 1
+        num_of_tries = 0
 
         # a dictionary that curtains the different try modes in ascii art(done)
         HANGMAN_PHOTOS = {
@@ -185,7 +188,7 @@ def main():
         
         print("\nLet's go!\n")
         
-        print(HANGMAN_PHOTOS[1])
+        #print(HANGMAN_PHOTOS[1])
         print(show_hidden_word(secret_word, old_letters_guessed))
 
         while num_of_tries < MAX_TRIES and win != True:
